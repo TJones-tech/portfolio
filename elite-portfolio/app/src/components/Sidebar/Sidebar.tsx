@@ -23,13 +23,13 @@ export default function Sidebar() {
         <div className="text-center items-center">
           <button
             type="button"
-            className="py-2 px-4 bg-gray-800 hover:bg-gray-500 focus:ring-gray-300 focus:ring-offset-yellow-800 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+            className="py-2 px-4 bg-gray-900 hover:bg-gray-500 focus:ring-gray-300 focus:ring-offset-yellow-800 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
           >
             Web Developer
           </button>
           <button
             type="button"
-            className="py-2 px-4 mt-4 flex bg-gray-800 hover:bg-gray-500 focus:ring-gray-300 focus:ring-offset-yellow-800 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+            className="py-2 px-4 mt-4 flex bg-gray-900 hover:bg-gray-500 focus:ring-gray-300 focus:ring-offset-yellow-800 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
           >
             <div className="text-center ml-12">
               <span className="pr-1">
@@ -54,7 +54,7 @@ export default function Sidebar() {
             icon={faEnvelope}
           />
         </div>
-        <div className="rounded-lg bg-gray-800 text-center text-white  p-4">
+        <div className="rounded-lg bg-gray-900 text-center text-white  p-4">
           <p className="pb-2">Dallas, Texas</p>
           <p className="pb-2">t.jones50.tj@gmail.com</p>
           <p className="pb-2">Contact me</p>
