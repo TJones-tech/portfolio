@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Sidebar from "./src/components/Sidebar/Sidebar";
 import Navbar from "./src/components/Navbar/Navbar";
+import Main from "./src/pages/main";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
         <Sidebar />
       </div>
       <div className="col-span-9 bg-black  rounded-2xl max-[767px]:col-span-12">
-        <Navbar />
+        <Main />
       </div>
     </div>
   );

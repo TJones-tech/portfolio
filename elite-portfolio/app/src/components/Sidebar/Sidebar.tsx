@@ -41,18 +41,24 @@ export default function Sidebar() {
         </div>
 
         <div className="text-center flex space-x-14">
-          <FontAwesomeIcon
-            className="bg-amber-400 rounded-lg h-14 w-14 p-4 ml-5 my-8"
-            icon={faLinkedin}
-          />
-          <FontAwesomeIcon
-            className="bg-amber-400 rounded-lg h-14 w-14 p-4 my-8"
-            icon={faGithub}
-          />
-          <FontAwesomeIcon
-            className="bg-amber-400 rounded-lg h-14 w-14 p-4 my-8"
-            icon={faEnvelope}
-          />
+          <a href="https://www.linkedin.com/in/terrance-jones-1b690b23a/">
+            <FontAwesomeIcon
+              className="bg-amber-400 rounded-lg h-14 w-14 p-4 ml-5 my-8"
+              icon={faLinkedin}
+            />
+          </a>
+          <a href="https://github.com/TJones-tech">
+            <FontAwesomeIcon
+              className="bg-amber-400 rounded-lg h-14 w-14 p-4 my-8"
+              icon={faGithub}
+            />
+          </a>
+          <a>
+            <FontAwesomeIcon
+              className="bg-amber-400 rounded-lg h-14 w-14 p-4 my-8"
+              icon={faEnvelope}
+            />
+          </a>
         </div>
         <div className="rounded-lg bg-gray-900 text-center text-white  p-4">
           <p className="pb-2">Dallas, Texas</p>
