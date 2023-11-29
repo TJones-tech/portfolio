@@ -1,19 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
-
-export default function Navbar() {
-  const [about, setAbout] = useState(false);
-
+const Navbar: React.FC = () => {
   return (
     <nav className="flex flex-wrap items-center justify-between p-4 bg-gray-900">
       <div className="block lg:hidden"></div>
       <div className="hidden w-full navbar-menu lg:order-1 lg:block lg:w-2/5">
         <a
-          onClick={() => setAbout(!about)}
-          onMouseEnter={() => setAbout(true)}
-          onMouseLeave={() => setAbout(false)}
-          className="block mt-4 mr-10 text-xl text-white hover:text-2xl hover:font-bold lg:inline-block lg:mt-0 active:underline active:decoration-4 active:decoration-solid active:decoration-amber-400"
+          className="block mt-4 mr-10 text-2xl font-bold text-white hover:text-2xl hover:font-bold lg:inline-block lg:mt-0 underline decoration-4 decoration-solid decoration-amber-400"
           href="#"
         >
           About
@@ -35,4 +28,6 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;
