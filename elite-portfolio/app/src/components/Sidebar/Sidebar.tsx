@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import Image from "next/image";
 import CloudDownloadTwoToneIcon from "@mui/icons-material/CloudDownloadTwoTone";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -6,13 +9,28 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 export default function Sidebar() {
+  const handleDownload = () => {
+    const resumePath: string = "/resume.pdf";
+    const link: HTMLAnchorElement = document.createElement("a");
+    link.href = resumePath;
+    link.setAttribute("download", "Terrance_Jones_resume.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const emailAddress: string = "t.jones50.tj@gmail.com";
+  const subject: string = "";
+
   return (
     <div className="p-4">
       <div className="text-center my-1">
         <a href="#" className="relative block">
-          <img
+          <Image
             alt="Terrance Jones"
-            src="https://mail.google.com/mail/u/0?ui=2&ik=046f2490a3&attid=0.1&permmsgid=msg-a:r-8787582277496189245&th=18bdebd977dfada6&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9Bm9YCxmB1lYd1YjL0JzaCMb99etybaeOuK3X5p2Nn1SNcZGqqOPFVfmAvfStx0LkEZx5l8VjubuMvRv0ptV7eSPxORpMO7qudShb9JP1LPIy2o_cZR9sRN4c&disp=emb&realattid=18bdebd8bda56833ef51"
+            src="/me.png"
+            width={100}
+            height={100}
             className="mx-auto object-cover rounded-full h-40 w-40"
           />
         </a>
@@ -21,15 +39,13 @@ export default function Sidebar() {
           <span className="text-rose-950">𝓷</span>𝓮𝓼
         </div>
         <div className="text-center items-center">
-          <button
-            type="button"
-            className="py-2 px-4 bg-gray-900 hover:bg-gray-500 focus:ring-gray-300 focus:ring-offset-yellow-800 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
-          >
+          <div className="py-2 px-4 bg-gray-900 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md rounded-full">
             Web Developer
-          </button>
+          </div>
           <button
             type="button"
-            className="py-2 px-4 mt-4 flex bg-gray-900 hover:bg-gray-500 focus:ring-gray-300 focus:ring-offset-yellow-800 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
+            onClick={handleDownload}
+            className="py-2 px-4 mt-4 flex bg-gray-900 hover:bg-gray-500 focus:ring-offset-yellow-800 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-full"
           >
             <div className="text-center ml-12">
               <span className="pr-1">
@@ -43,19 +59,23 @@ export default function Sidebar() {
         <div className="text-center flex space-x-14">
           <a href="https://www.linkedin.com/in/terrance-jones-1b690b23a/">
             <FontAwesomeIcon
-              className="bg-amber-400 rounded-lg h-14 w-14 p-4 ml-5 my-8"
+              className="bg-amber-400 rounded-lg h-6 w-6 p-4 ml-5 my-8"
               icon={faLinkedin}
             />
           </a>
           <a href="https://github.com/TJones-tech">
             <FontAwesomeIcon
-              className="bg-amber-400 rounded-lg h-14 w-14 p-4 my-8"
+              className="bg-amber-400 rounded-lg h-6 w-6 p-4 my-8"
               icon={faGithub}
             />
           </a>
-          <a>
+          <a
+            href={`mailto:${emailAddress}?subject=${encodeURIComponent(
+              subject
+            )}`}
+          >
             <FontAwesomeIcon
-              className="bg-amber-400 rounded-lg h-14 w-14 p-4 my-8"
+              className="bg-amber-400 rounded-lg h-6 w-6 p-4 my-8"
               icon={faEnvelope}
             />
           </a>
@@ -66,12 +86,15 @@ export default function Sidebar() {
           <p className="pb-2">Contact me</p>
         </div>
         <div>
-          <button
+          <a
             type="button"
-            className="py-2 px-8 bg-rose-950 text-center text-white rounded-full my-8 800 hover:bg-gray-500 focus:ring-gray-300 focus:ring-offset-yellow-800 transition ease-in duration-200 focus:ring-2 focus:ring-offset-2"
+            href={`mailto:${emailAddress}?subject=${encodeURIComponent(
+              subject
+            )}`}
+            className="py-2 px-8 bg-rose-950 text-center text-white rounded-full my-8 hover:bg-gray-500 focus:ring-gray-300 focus:ring-offset-yellow-800 transition ease-in duration-200 focus:ring-2 focus:ring-offset-2"
           >
             Email me
-          </button>
+          </a>
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ const Resume: React.FC = () => {
           <div className="block lg:hidden"></div>
           <div className="hidden w-full navbar-menu lg:order-1 lg:block lg:w-2/5">
             <a
-              className="block mt-4 mr-10 text-2xl font-bold text-white hover:text-2xl hover:font-bold lg:inline-block lg:mt-0 underline decoration-4 decoration-solid decoration-amber-400"
+              className="block mt-4 mr-10 text-2xl font-bold text-white hover:text-2xl hover:font-bold lg:inline-block lg:mt-0 underline underline-offset-8 decoration-4 decoration-solid decoration-amber-400"
               href="/resume"
             >
               Resume
@@ -20,21 +20,21 @@ const Resume: React.FC = () => {
           </div>
           <div className="hidden w-full navbar-menu lg:order-3 lg:block lg:w-2/5 lg:text-right">
             <a
-              className="block mt-4 mr-10 text-xl text-white lg:inline-block lg:mt-0 hover:text-2xl hover:font-bold active:underline active:decoration-4 active:decoration-solid active:decoration-amber-400"
+              className="block mt-4 mr-10 text-xl text-white lg:inline-block lg:mt-0 hover:text-2xl hover:font-bold"
               href="/"
             >
               About
             </a>
             <a
-              className="block mt-4 text-xl text-white lg:inline-block lg:mt-0 hover:text-2xl hover:font-bold active:underline active:decoration-4 active:decoration-solid active:decoration-amber-400"
-              href="#"
+              className="block mt-4 text-xl text-white lg:inline-block lg:mt-0 hover:text-2xl hover:font-bold"
+              href="/projects"
             >
               Projects
             </a>
           </div>
         </nav>
-        <div className="grid grid-cols-2 gap-8 p-4 mt-2">
-          <div className="bg-neutral-950 p-0">
+        <div className="grid grid-cols-2 gap-8 p-4 mt-4">
+          <div className="bg-gray-900 rounded-lg p-4">
             <h2 className="text-2xl text-white font-bold">Education</h2>
             <p className="text-white text-xl mt-4 font-semibold">
               Bachelor of Business Administration
@@ -93,7 +93,7 @@ const Resume: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-neutral-950 p-0">
+          <div className="bg-gray-900 rounded-lg p-4">
             <h2 className="text-2xl text-white font-bold">Experience</h2>
             <p className="text-white text-xl mt-4 font-semibold">
               Software Engineer

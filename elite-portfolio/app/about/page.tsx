@@ -17,7 +17,7 @@ const Main: React.FC = () => {
         <div className="block lg:hidden"></div>
         <div className="hidden w-full navbar-menu lg:order-1 lg:block lg:w-2/5">
           <a
-            className="block mt-4 mr-10 text-2xl font-bold text-white hover:text-2xl hover:font-bold lg:inline-block lg:mt-0 underline decoration-4 decoration-solid decoration-amber-400"
+            className="block mt-4 mr-10 text-2xl font-bold text-white hover:text-2xl hover:font-bold lg:inline-block lg:mt-0 underline underline-offset-8 decoration-4 decoration-solid decoration-amber-400"
             href="/"
           >
             About
@@ -25,14 +25,14 @@ const Main: React.FC = () => {
         </div>
         <div className="hidden w-full navbar-menu lg:order-3 lg:block lg:w-2/5 lg:text-right">
           <a
-            className="block mt-4 mr-10 text-xl text-white lg:inline-block lg:mt-0 hover:text-2xl hover:font-bold active:underline active:decoration-4 active:decoration-solid active:decoration-amber-400"
+            className="block mt-4 mr-10 text-xl text-white lg:inline-block lg:mt-0 hover:text-2xl hover:font-bold"
             href="/resume"
           >
             Resume
           </a>
           <a
-            className="block mt-4 text-xl text-white lg:inline-block lg:mt-0 hover:text-2xl hover:font-bold active:underline active:decoration-4 active:decoration-solid active:decoration-amber-400"
-            href="#"
+            className="block mt-4 text-xl text-white lg:inline-block lg:mt-0 hover:text-2xl hover:font-bold"
+            href="/projects"
           >
             Projects
           </a>
