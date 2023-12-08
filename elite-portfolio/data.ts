@@ -22,13 +22,14 @@ export const projects: IProject[] = [
   },
 
   {
-    name: "Calculator",
-    image_path: "/calculator.png",
+    name: "Crypto App",
+    image_path: "/crypto.png",
     deployed_url: "https://github.com/TJones-tech",
-    github_url: "https://github.com/TJones-tech/TJ-Calculator",
-    category: ["node", "react"],
-    description: "A Calculator to use for your own personal use",
-    key_techs: ["React", "Node", "Express"],
+    github_url: "https://github.com/TJones-tech/crypto_app",
+    category: ["node", "react", "express"],
+    description:
+      "A crypto currency app to keep users updated on the progress of the crypto world",
+    key_techs: ["React", "Node", "Express", "Ant"],
   },
 
   {
@@ -61,5 +62,14 @@ export const projects: IProject[] = [
     description:
       "Tried ML with JS :) | this app classifies a color using CNN algorithm in browser",
     key_techs: ["Express", "React", "node", "Vanilla js"],
+  },
+  {
+    name: "Calculator",
+    image_path: "/calculator.png",
+    deployed_url: "https://github.com/TJones-tech",
+    github_url: "https://github.com/TJones-tech/TJ-Calculator",
+    category: ["node", "react"],
+    description: "A Calculator to use for your own personal use",
+    key_techs: ["React", "Node", "Express"],
   },
 ];
