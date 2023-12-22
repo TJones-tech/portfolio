@@ -71,16 +71,19 @@ export default function Sidebar() {
           />
         </a>
       </div>
-      <div className="rounded-lg bg-gray-900 text-center text-white  p-4">
-        <p className="pb-2">Dallas, Texas</p>
-        <p className="pb-2">t.jones50.tj@gmail.com</p>
-        <p className="pb-2">Contact me</p>
+      <div
+        className="rounded-lg bg-gray-900 text-center text-white py-4 my-5"
+        style={{ marginLeft: "-1rem", marginRight: "-1rem" }}
+      >
+        <p className="my-2">Dallas, Texas</p>
+        <p className="my-2">t.jones50.tj@gmail.com</p>
+        <p className="my-2">Contact me</p>
       </div>
       <div>
         <a
           type="button"
           href={`mailto:${emailAddress}?subject=${encodeURIComponent(subject)}`}
-          className="py-2 px-8 bg-rose-950 text-center text-white rounded-full my-8 hover:bg-gray-500 focus:ring-gray-300 focus:ring-offset-yellow-800 transition ease-in duration-200 focus:ring-2 focus:ring-offset-2"
+          className="py-2 px-5 bg-rose-950 text-center text-white cursor-pointer rounded-full my-8 hover:bg-gray-500 focus:ring-gray-300 focus:ring-offset-yellow-800 transition ease-in duration-200 focus:ring-2 focus:ring-offset-2"
         >
           Email me
         </a>
