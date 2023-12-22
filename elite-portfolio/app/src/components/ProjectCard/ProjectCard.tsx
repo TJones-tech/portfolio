@@ -1,7 +1,7 @@
 "use client";
 
 import { FunctionComponent, useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { IProject } from "@/types";
 import { MdClose } from "react-icons/md";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

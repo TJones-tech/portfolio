@@ -1,32 +1,60 @@
 "use client";
+import { useState, useEffect, FunctionComponent } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-const Navbar: React.FC = () => {
+const NavItem: FunctionComponent<{
+  active: string;
+  setActive: Function;
+  name: string;
+  route: string;
+}> = ({ active, setActive, name, route }) => {
+  return active !== name ? (
+    <Link href={route}>
+      <span
+        className="mx-2 cursor-pointer hover:border-b-4 hover:text-amber-400 hover:text-2xl hover:font-bold"
+        onClick={() => setActive(name)}
+      >
+        {name}
+      </span>
+    </Link>
+  ) : null;
+};
+
+const Navbar = () => {
+  const pathname = usePathname();
+
+  const [active, setActive] = useState("");
+
+  //later
+  useEffect(() => {
+    if (pathname === "/") setActive("About");
+    else if (pathname === "/projects") setActive("Projects");
+    else if (pathname === "/resume") setActive("Resume");
+  }, []);
+
   return (
-    <nav className="flex flex-wrap items-center justify-between p-4 bg-gray-900">
-      <div className="block lg:hidden"></div>
-      <div className="hidden w-full navbar-menu lg:order-1 lg:block lg:w-2/5">
-        <a
-          className="block mt-4 mr-10 text-2xl font-bold text-white hover:text-2xl hover:font-bold lg:inline-block lg:mt-0 underline decoration-4 decoration-solid decoration-amber-400"
-          href="#"
-        >
-          About
-        </a>
+    <div className="flex items-center justify-between px-5 py-3 my-3">
+      <span className="text-xl text-white font-bold border-b-4 md:text-2xl border-amber-400">
+        {active}
+      </span>
+
+      <div className="text-base text-white font-normal md:text-xl">
+        <NavItem active={active} setActive={setActive} name="About" route="/" />
+        <NavItem
+          active={active}
+          setActive={setActive}
+          name="Resume"
+          route="/resume"
+        />
+        <NavItem
+          active={active}
+          setActive={setActive}
+          name="Projects"
+          route="/projects"
+        />
       </div>
-      <div className="hidden w-full navbar-menu lg:order-3 lg:block lg:w-2/5 lg:text-right">
-        <a
-          className="block mt-4 mr-10 text-xl text-white lg:inline-block lg:mt-0 hover:text-2xl hover:font-bold active:underline active:decoration-4 active:decoration-solid active:decoration-amber-400"
-          href="#"
-        >
-          Resume
-        </a>
-        <a
-          className="block mt-4 text-xl text-white lg:inline-block lg:mt-0 hover:text-2xl hover:font-bold active:underline active:decoration-4 active:decoration-solid active:decoration-amber-400"
-          href="#"
-        >
-          Projects
-        </a>
-      </div>
-    </nav>
+    </div>
   );
 };
 
