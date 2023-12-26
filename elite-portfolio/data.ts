@@ -175,7 +175,7 @@ export const tools: Skill[] = [
   },
   {
     Icon: BsCircleFill,
-    name: "Azure Devops",
+    name: "Azure-Devops",
     level: "35",
   },
   {
