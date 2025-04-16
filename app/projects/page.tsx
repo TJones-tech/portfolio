@@ -28,7 +28,7 @@ const page: React.FC = () => {
 
   return (
     <DashboardLayout>
-      <div className="px-5 py-2 overflow-y-scroll" style={{ height: "65vh" }}>
+      <div className="px-5 py-2 overflow-y-scroll" style={{ height: "63vh" }}>
         <ProjectsNavbar
           handlerFilterCategory={handlerFilterCategory}
           active={active}
