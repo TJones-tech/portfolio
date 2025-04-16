@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary text-accent-lighter;
+    font-family: "Inter", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-accent-lighter font-bold;
+  }
+
+  a {
+    @apply text-secondary hover:text-secondary-light transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .tech-card {
+    @apply bg-primary-light rounded-lg p-4 sm:p-6 shadow-tech hover:shadow-tech-lg transition-all duration-300;
+  }
+
+  .tech-button {
+    @apply bg-secondary text-white font-semibold px-4 sm:px-6 py-2 rounded-md 
+           hover:bg-secondary-light hover:text-white transition-colors duration-300 text-sm sm:text-base;
+  }
+
+  .tech-input {
+    @apply bg-primary-light border border-accent rounded-md px-3 sm:px-4 py-2 
+           focus:outline-none focus:border-secondary transition-colors duration-300
+           text-sm sm:text-base w-full sm:w-auto;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20;
+  }
+
+  .container-width {
+    @apply w-full max-w-7xl mx-auto;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary-light;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-secondary-light;
+}
