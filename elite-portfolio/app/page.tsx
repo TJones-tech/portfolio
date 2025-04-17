@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import { projects } from "@/data";
-import TechnicalSkills from "./src/components/TechnicalSkills/TechnicalSkills";
+import TechnicalSkills from "../src/components/TechnicalSkills/TechnicalSkills";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import Hero from "./components/Hero";
+import Hero from "../src/components/Hero/Hero";
 
 export default function Home() {
   const featuredProjects = projects.slice(0, 3);

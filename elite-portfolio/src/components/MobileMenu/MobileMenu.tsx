@@ -57,7 +57,7 @@ export default function MobileMenu() {
                 Projects
               </a>
               <a
-                href="#skills"
+                href="#technical-skills"
                 className="text-accent-light hover:text-secondary transition-colors px-4 py-2"
                 onClick={() => setIsOpen(false)}
               >
