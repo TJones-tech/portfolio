@@ -1,17 +1,13 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
         primary: {
           DEFAULT: "#000000", // Dark navy background
-          light: "#112240", // Lighter navy
+          light: "#112240", // Lighter navy for cards
           lighter: "#233554", // Navy for hover states
         },
         secondary: {
@@ -27,6 +23,7 @@ const config: Config = {
       backgroundImage: {
         "gradient-tech":
           "radial-gradient(circle at top center, #112240 0%, #0A192F 100%)",
+        "grid-pattern": "url('/grid.svg')",
       },
       boxShadow: {
         tech: "0 4px 20px -2px rgba(37, 99, 235, 0.1)",
